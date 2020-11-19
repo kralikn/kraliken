@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+body .main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85vh;
+  width: 100vw;
+}
+
+body .main_content .main_content_left {
+  margin-left: 1em;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+body .main_content .main_content_right {
+  margin-right: 1em;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+body .main_content .main_content_center {
+  -ms-flex-negative: 5;
+      flex-shrink: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+}
+
+body .main_content .main_content_center .header1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+body .main_content .main_content_center .content1_container {
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2em;
+}
+
+body .main_content .main_content_center .button1 {
+  text-decoration: none;
+  color: white;
+  border: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 14px 25px;
+  min-width: 150px;
+  max-width: 200px;
+  width: 40%;
+  margin-top: 2em;
+}
+
+body .main_content .main_content_center .button1:hover {
+  background-color: #98ac7b;
+  color: white;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+body .bottom_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  margin-bottom: 10px;
+  height: 20px;
+  z-index: 10;
+}
+
+body .bottom_nav .bottom_dot .dot {
+  height: 10px;
+  margin: 5px;
+}
+
+.nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  width: 100%;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(95%, rgba(12, 39, 13, 0.8)));
+  background: linear-gradient(to right, transparent, rgba(12, 39, 13, 0.8) 95%);
+}
+
+.nav_hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.nav_hamburger-checkbox {
+  display: none;
+}
+
+.nav_hamburger-label {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_hamburger-label-div {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.nav_hamburger-label::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav_hamburger-label::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav_logo-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .8rem 1.5rem;
+  letter-spacing: 1px;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+.nav_logo-link:hover {
+  letter-spacing: 3px;
+  padding-left: 1.7rem;
+}
+
+.nav_logo-link:hover {
+  letter-spacing: 3px;
+  padding-left: 1.7rem;
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label > .nav_hamburger-label-div {
+  width: 0;
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label:before {
+  -webkit-transform: rotate(45deg) translateX(0px);
+          transform: rotate(45deg) translateX(0px);
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label:after {
+  -webkit-transform: rotate(-45deg) translate(0px);
+          transform: rotate(-45deg) translate(0px);
+}
+
+.menu {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 5rem;
+  right: -25%;
+  height: 100vh;
+  width: 25%;
+  background: rgba(12, 39, 13, 0.8);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media (max-width: 980px) {
+  .menu {
+    right: -35%;
+    width: 35%;
+  }
+}
+
+@media (max-width: 720px) {
+  .menu {
+    right: -45%;
+    width: 45%;
+  }
+  .donate_btn {
+    right: 10%;
+  }
+  .donate_btn_link {
+    display: none;
+  }
+}
+
+.nav_hamburger-checkbox:checked ~ .menu {
+  right: 0;
+}
+
+.menu-list {
+  width: 100%;
+  list-style: none;
+}
+
+.menu-list-item-link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #fff;
+  padding: 1rem;
+  -webkit-transition: .6s;
+  transition: .6s;
+  cursor: pointer;
+}
+
+.nav_hamburger-checkbox:checked ~ .menu .menu-list-item-link {
+  opacity: 1;
+}
+
+.menu-list-item-link:hover {
+  font-style: italic;
+  padding-left: 1.2rem;
+}
+
+.donate_btn {
+  position: absolute;
+  color: white;
+  padding: 50px;
+  right: 20%;
+  letter-spacing: 1px;
+}
+
+.donate_btn .donate_btn_link {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding-right: 40px;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.donate_btn .donate_btn_link1 {
+  text-decoration: none;
+  color: #f5e37aad;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background: #fa5144a1;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.donate_btn .donate_btn_link:hover {
+  letter-spacing: 0,5px;
+  font-size: large;
+}
+
+.donate_btn .donate_btn_link1:hover {
+  background: #f7f7f7d2;
+  color: #fa5044;
+  font-size: 22px;
+}
+
+@media (max-width: 560px) {
+  .menu {
+    right: -100%;
+    width: 100%;
+  }
+  .menu-list {
+    text-align: center;
+  }
+  .donate_btn {
+    right: 12%;
+  }
+  .donate_btn_link1 {
+    font-size: 14px;
+    padding: 6;
+  }
+  .nav_hamburger {
+    width: 50px;
+    height: 3.5rem;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url("../images/forest-1920.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  background-color: #3e2c3c;
+}
+/*# sourceMappingURL=style.css.map */
