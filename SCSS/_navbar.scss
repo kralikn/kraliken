@@ -1,0 +1,220 @@
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, transparent, rgba(12, 39, 13, .8) 95%);
+
+  &_hamburger {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60px;
+    height: 4rem;
+    cursor: pointer;
+
+    &-checkbox {
+      display: none;
+    }
+
+    &-label {
+      
+      width: 100%;
+      height: 4rem;
+      cursor: pointer;
+      transition: .3s;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &-div {
+        
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background: #fff;
+        cursor: pointer;
+        transition: .1s;
+
+        &::before {
+          content: "";
+          position: absolute;
+          transform: translateY(-12px);
+          width: 30px;
+          height: 4px;
+          border-radius: 2px;
+          background: #fff;
+          transition: .3s;
+        }
+        
+        &::after {
+          content: "";
+          position: absolute;
+          transform: translateY(12px);
+          width: 30px;
+          height: 4px;
+          border-radius: 2px;
+          background: #fff;
+          transition: .3s;
+        } 
+      }  
+    }
+  }
+}
+
+.nav_logo-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .8rem 1.5rem;
+  letter-spacing: 1px;
+  transition: ease .5s;
+}
+
+.nav_logo-link:hover {
+  letter-spacing: 3px;
+  padding-left: 1.7rem;
+}
+
+.nav_logo-link:hover {
+  letter-spacing: 3px;
+  padding-left: 1.7rem;
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label > .nav_hamburger-label-div {
+  width: 0;
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label > .nav_hamburger-label-div:before {
+  transform: rotate(45deg);
+}
+
+.nav_hamburger-checkbox:checked + .nav_hamburger-label > .nav_hamburger-label-div:after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 5rem;
+  right: -25%;
+  height: 100vh;
+  width: 25%;
+  background: rgba(12, 39, 13, .8);
+  transition: all .5s;
+}
+
+@media (max-width: 980px ) {
+  .menu {
+    right: -35%;
+    width: 35%;
+    background: rgba(12, 39, 13, .95);
+  }
+}
+
+@media (max-width: 720px ) {
+  .menu {
+    right: -45%;
+    width: 45%;
+  }
+  .donate_btn{
+    right:10%;
+  }
+  .donate_btn_link {
+    display: none;
+  }
+}
+
+.nav_hamburger-checkbox:checked ~ .menu {
+  right: 0;
+}
+
+.menu-list {
+  width: 100%;
+  list-style: none;
+}
+
+.menu-list-item-link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #fff;
+  padding: 1rem;
+  transition: .6s;
+  cursor: pointer;
+}
+
+.nav_hamburger-checkbox:checked ~ .menu .menu-list-item-link {
+  opacity: 1;
+}
+
+.menu-list-item-link:hover {
+  font-style: italic;
+  padding-left: 1.2rem;
+}
+
+.donate_btn{
+  position: absolute;
+  color: $primaryTextColor;
+  padding: 50px;
+  right:20%;
+  letter-spacing: 1px;
+
+  .donate_btn_link{
+    text-decoration: none;
+    color: $primaryTextColor;
+    font-family: $primaryFontFamily;
+    padding-right: 40px;
+    transition: ease 1s;
+    
+  }
+  .donate_btn_link1{
+    text-decoration: none;
+    color: #f5e37aad;
+    font-family: $primaryFontFamily;
+    font-size: 18px;
+    background: #fa5144a1;
+    border: 2px solid ;
+    border-radius: 20px;
+    padding: 10px;
+    transition: ease 1s;
+  }
+  .donate_btn_link:hover {
+    letter-spacing: 0,5px;
+    font-size: large;
+  }
+  .donate_btn_link1:hover {
+    background: #f7f7f7d2;
+    color:   #fa5044;
+    font-size: 22px;
+  }
+}
+@media (max-width: 560px ) {
+  .menu {
+    right: -100%;
+    width: 100%;
+    background: rgba(12, 39, 13, .95);
+  }
+  .menu-list {
+    text-align: center;
+  }
+  .donate_btn{
+    right:12%;
+  }
+  .donate_btn_link1 {
+    font-size: 14px;
+    padding: 6;
+  }
+  .nav_hamburger {
+    width: 50px;
+    height: 3.5rem;
+  }
+}
